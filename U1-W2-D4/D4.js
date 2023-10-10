@@ -46,7 +46,7 @@ const boundary = function (n) {
     return "il parametro n è :" + " " + false;
   }
 };
-console.log(boundary());
+console.log(boundary(400));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -54,14 +54,29 @@ console.log(boundary());
  ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const epify = function (str) {
+  if (str.includes("EPICODE")) {
+    return str;
+  } else {
+    return "EPICODE" + str;
+  }
+};
+console.log(epify(" EPICODE 2023"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+const check3and7 = function (num) {
+  if (num >= 0 && (num % 3 === 0 || num % 7 === 0)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(check3and7(21));
+console.log(check3and7(14));
+console.log(check3and7(52));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
