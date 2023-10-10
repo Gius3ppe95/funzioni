@@ -1,16 +1,25 @@
 /* ESERCIZIO 1
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato..
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+const area = function (l1, l2) {
+  return l1 * l2;
+};
+const areaResult = area(10, 20);
+console.log("L'area del rettangolo è :" + " " + areaResult);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
  La funzione deve ritornare la somma dei due parametri, ma se il valore dei due parametri è il medesimo deve invece tornare
  la loro somma moltiplicata per tre.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+const crazySum = function (num1, num2) {
+  if (num1 === num2) {
+    return "La loro somma moltiplicata per 3 è :" + " " + (num1 + num2) * 3;
+  } else {
+    return "la loro somma è " + num1 + num2;
+  }
+};
+console.log(crazySum(10, 10));
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
