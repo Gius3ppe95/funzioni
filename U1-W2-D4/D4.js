@@ -5,7 +5,7 @@ const area = function (l1, l2) {
   return l1 * l2;
 };
 const areaResult = area(10, 20);
-console.log("L'area del rettangolo è :" + " " + areaResult);
+console.log("L'area del rettangolo è : " + " " + areaResult);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -82,24 +82,53 @@ console.log(check3and7(52));
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const reverseString = function (str) {
+  let splitStr = str.split("");
+  let reverseStr = splitStr.reverse();
+  let newStr = reverseStr.join("");
+  return newStr;
+};
+console.log(reverseString("EPICODE"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const upperFirstPhrase = function (str) {
+  let words = str.split(" ");
+  let finalStr = [];
+  for (let i = 0; i < words.length; i++) {
+    let char = words[i].charAt(0);
+    let upperChar = char.toUpperCase();
+    let cutStr = words[i].slice(1);
+    let finalWord = upperChar + cutStr;
+    finalStr.push(finalWord);
+  }
+  console.log(finalStr.join(" "));
+};
+
+upperFirstPhrase("epicode è fantastica");
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const cutString = function (str) {
+  return str.slice(1, str.length - 1);
+};
+console.log(cutString("EPICODE"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function (n) {
+  const randomNumber = [];
+  for (let i = 0; i < n; i++) {
+    randomNumber.push(Math.floor(Math.random() * 10));
+  }
+  return randomNumber;
+};
+console.log(giveMeRandom(7));
